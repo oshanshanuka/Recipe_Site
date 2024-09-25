@@ -1,5 +1,4 @@
 .main{
-   
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -32,7 +31,7 @@
     margin-top: 5%;
     padding: 5px 10px;
     border: none;
-    background-color: #914545;
+    background-color:chocolate;
     color: white;
     border-radius: 5px;
     cursor: pointer;
