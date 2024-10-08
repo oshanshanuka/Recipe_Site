@@ -27,6 +27,11 @@
     border-radius: 10px;
 }
 
+.gift{
+    transition: transform 2s ease-in-out 1s;
+    transform: scale(1) rotate(0deg);
+}
+
 .card button{
     margin-top: 5%;
     padding: 5px 10px;
@@ -46,7 +51,7 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #743232;
+    background-color: red;
     padding: 10px 20px;
     color: white;
 }
@@ -57,7 +62,7 @@ nav ul{
 }
 
 nav ul li{
-    margin-right: 20px;
+    margin-right: 60px;
 }
 
 nav ul li a{
@@ -87,4 +92,16 @@ button:hover{
     background-color: black;
     color: white;
     cursor: pointer;
+}
+
+#logo{
+    width: 110px;
+    height: 50px;
+    margin-right: 10px;
+    border: 1px solid red;
+    border-radius: 10px;
+}
+
+#logo-container{
+    display: flex;
 }
