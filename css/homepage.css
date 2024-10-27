@@ -106,3 +106,117 @@ button:hover{
 #logo-container{
     display: flex;
 }
+
+.menu-panel{
+    background-color: red;
+    color: white;
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    transition: right ease 0.4s;
+}
+.menu-panel ul {
+    list-style: none;
+    padding: 50px 20px;
+}
+
+.menu-panel ul li {
+    margin-bottom: 20px;
+}
+
+.menu-panel ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.close-btn {
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+
+
+/* Media Queries */
+/* Mobile */
+@media screen and (min-width: 320px) and (max-width: 425px) {
+    nav ul li {
+        margin-right: 20px;
+    }
+    
+    .burger {
+        display: block;
+        font-size: 1.5rem;
+        color: white;
+        cursor: pointer;
+    }
+
+    nav ul {
+        display: none;
+    }
+    h1{
+        font-size: 20px;
+    }
+    .card {
+        width: 100%;
+        margin: 1%;
+    }
+    .burger {
+        display: block;
+      }
+
+      .menu-panel.active {
+        right: 0;
+      }
+}
+
+/* Tablet */    
+@media screen and (min-width: 426px) and (max-width: 1023px){
+    nav ul li {
+        margin-right: 20px;
+    }
+
+    .burger {
+        display: block;
+        font-size: 1.5rem;
+        color: white;
+        cursor: pointer;
+    }
+
+    .header {
+        text-align: center;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    h1{
+        font-size: 20px;
+    }
+
+    .card {
+        width: 50%;
+        margin: 1%;
+    }
+
+}
+
+/* Desktop */   
+@media screen and (min-width: 1024px) and (min-width: 1440px) {
+    nav ul li {
+        margin-right: 50px;
+    }
+    .card {
+        width: 25%;
+        margin: 1%;
+    }
+}
