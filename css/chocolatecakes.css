@@ -176,6 +176,7 @@ button:hover{
       }
 
       .menu-panel.active {
+        margin-top: 10px;
         right: 0;
       }
 }
@@ -205,6 +206,10 @@ button:hover{
         font-size: 20px;
     }
 
+    .menu-panel.active {
+        margin-top: 15px;
+        right: 0;
+    }
     .card {
         width: 50%;
         margin: 1%;

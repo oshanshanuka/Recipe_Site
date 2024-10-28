@@ -116,95 +116,103 @@ h1{
     box-shadow: 10px 10px 10px black;
     border-radius: 10px;
 }
+
 .burger {
-    display: none;
+    display: block;
+    font-size: 1.5rem;
     color: white;
-    font-size: 1.2rem;
     cursor: pointer;
 }
-
-.menu-panel {
-    background-color: #333;
+.menu-panel{
+    background-color: red;
     color: white;
     height: 100%;
     width: 250px;
     position: fixed;
     top: 0;
     right: -100%;
-    transition: right 0.4s ease;
+    transition: right ease 0.4s;
 }
-
 .menu-panel ul {
     list-style: none;
     padding: 50px 20px;
 }
 
 .menu-panel ul li {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .menu-panel ul li a {
     color: white;
     text-decoration: none;
-    font-size: 1.2rem;
 }
-
-.close-btn {
-    background-color: transparent;
-    color: white;
-    border: none;
-    font-size: 2rem;
-    cursor: pointer;
+.close-btn{
     position: absolute;
     top: 10px;
-    right: 20px;
+    right: 10px;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+    background-color: transparent;
+}
+.open-btn{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
 }
 
-@media screen and (max-width: 475px) {
-    .nav {
-      display: none;
-    }
 
-    .logo-container {
-      display: none;
-    }
 
+/* Media Queries */
+/* Mobile */
+@media screen and (min-width: 320px) and (max-width: 425px) {
+    nav ul li {
+        margin-right: 20px;
+    }
+    nav ul {
+        display: none;
+    }
+    .card {
+        width: 90%;
+        margin: 1%;
+    }
+    img{
+        width: 100%;
+    }
+    footer .image{
+        width: 100%;
+    }
     .burger {
-      display: block;
+        margin-top: 20px;
+        display: block;
     }
-
     .menu-panel.active {
-      right: 0;
+        margin-top: 15px;
+        right: 0;
     }
-    .main{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin-top: 5%;
-        margin-bottom: 5%;
-        background-color : #ffffff;
+    .menu-panel ul li a {
+        font-size: 1rem;
     }
-    
-    .card{
-        display: inline-block;
-        margin: 2%;
-        padding: 2%;
-        background-color: #f5f5f5;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        text-align: center;
-        width: 30%;
-        height: 30%;
-        text-align: center;
+    .close-btn {
+        font-size: 1.5rem;
     }
-    
+    .open-btn{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 1.5rem;
+        color: white;
+        cursor: pointer;
+    }
+    iframe{
+        width: 100%;
+    }
     .card img{
         width: 100%;
-        height: 100%;
-        border-radius: 10px;
     }
-    
     .card button{
         margin-top: 5%;
         padding: 5px 10px;
@@ -215,88 +223,56 @@ h1{
         cursor: pointer;
         width: 50%;
     }
-    
     .card button:hover{
         background-color: #cc8484;
     }
-    
-    nav{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: red;
-        padding: 10px 20px;
-        color: white;
-        position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
-        z-index: 1030;
+    footer .image{
+        width: auto;
     }
-    
-    nav ul{
-        display: flex;
-        list-style: none;
+}
+/* Tablet */
+@media screen and (min-width: 426px) and (max-width: 1023px){
+    nav ul li {
+        margin-right: 20px;
     }
-    
-    nav ul li{
-        margin-right: 60px;
-    }
-    
-    nav ul li a{
-        color: white;
-        text-decoration: none;
-    }
-    
-    nav ul li a:hover{
-        text-decoration: underline;
-    }
-    .header{
-        text-align: center;
-        color: #914545;
-        margin-bottom: 2%;
-        margin-top: 2%;
-    }
-    
-    .btn{
-        border: 1px solid black;
-        color: black;
-        background-color: white;
-        padding: 12px 32px;
-        border-radius: 15px;
-    }
-    
-    button:hover{
-        background-color: black;
-        color: white;
+
+    .burger {
+        display: block;
+        font-size: 1.5rem;
+        color: white;    
         cursor: pointer;
     }
-    
-    #logo{
-        width: 110px;
-        height: 50px;
-        margin-right: 10px;
-        border: 1px solid red;
-        border-radius: 10px;
+    .header {
+        text-align: center;
     }
-    
-    #logo-container{
-        display: flex;
+    .menu-panel.active {
+        margin-top: 15px;
+        right: 0;
     }
-    
-    h2:hover{
-        color: gray;
-      }
-    
-    h1{
-        border-width: auto;
-        border: 2px solid red;
-        padding: 5px;
-        box-shadow: 10px 10px 10px black;
-        border-radius: 10px;
+    nav ul {
+        display: none;
     }
-    
+    .card {
+        width: 50%;
+        margin: 1%;
+    }
 }
-
-
+    @media screen and (min-width: 1024px) and (min-width: 1440px) {
+        nav ul li {
+            margin-right: 20px;
+        }
+        .header {
+            text-align: center;
+        }
+        nav ul {
+            display: flex;
+        }
+        h1{
+            font-size: 20px;
+        }
+        .card {
+            width: 50%;
+            margin: 1%;
+        }
+    }
 

@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/giftpage.css" />
     <title>Chocolate gifts</title>
-    <style>
-      h2:hover{
-        color: gray;
-      }
-    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    
 </head>
 <body>
   <header>
@@ -26,8 +29,21 @@
         <li><a href="contacts.html">Contact Us</a></li>
         <li><a href="About.html">About Us</a></li>
       </ul>
+      <i class="fas fa-bars burger" id="burger"></i>
     </nav>
   </header>
+  <div class="menu-panel" id="menu-panel-id">
+    <button class="close-btn" id="btn-close">&times;</button>
+    <ul>
+      <li><a href="homepage.html"target="_blank">Home</a></li>
+      <li><a href="ChocolatePage.html"target="_blank">Chocolate categories</a></li>
+      <li><a href="giftpage.html"target="_blank">Chocolate Gifts</a></li>
+      <li><a href="ChocolateCakes.html"target="_blank">Kitkat Cakes & Ice Cream</a></li>
+      <li><a href="Branches.html"target="_blank">Our Branches</a></li>
+      <li><a href="contacts.html"target="_blank">Contact Us</a></li>
+      <li><a href="about.html"target="_blank">About Us</a></li>
+  </ul>
+  </div>
   </br>
   </br>
   <main>
@@ -113,21 +129,21 @@
       <h2><a href="https://www.kitkat.com/"> www.Kitkat.com</a></h2>
       <h2><a href="https://www.nestle.com/"> www.Nestle.com</a></h2>
       <a href="https://web.facebook.com/kitkat/?_rdc=1&_rdr">
-        <img
+        <img class="image"
         src="/assets/image/Round Black Facebook Fb Logo Icon Sign.jpeg"
         width="50px"
         height="50px"
         alt="facebook logo"
         />
       </a>
-      <img
+      <img class="image"
         src="/assets/image/Premium Vector _ Vector phone icon.jpeg"
         width="50px"
         height="50px"
         alt="call logo"
       />
       <a href="https://www.youtube.com/@kitkat/featured">
-        <img
+        <img class="image"
         src="/assets/image/download.jpeg"
         width="50px"
         height="50px"
@@ -153,5 +169,18 @@
       <h6>A Quality Product of Nestle</h6>
     </footer>
   </main>  
+  <script>
+    const burger = document.getElementById("burger");
+    const menuPanel = document.getElementById("menu-panel-id");
+    const closeBtn = document.getElementById("btn-close");
+
+    burger.addEventListener("click", () => {
+      menuPanel.classList.toggle("active");
+    });
+
+    closeBtn.addEventListener("click", () => {
+      menuPanel.classList.remove("active");
+    });
+  </script>
 </body>
 </html>

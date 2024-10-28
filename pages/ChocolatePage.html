@@ -246,12 +246,16 @@
       </main>
     </section>
     <script>
-      // JavaScript for Burger Menu Toggle
       const burger = document.getElementById("burger");
-      const navMenu = document.getElementById("nav-menu");
+      const menuPanel = document.getElementById("menu-panel-id");
+      const closeBtn = document.getElementById("btn-close");
 
       burger.addEventListener("click", () => {
-          navMenu.classList.toggle("active");
+        menuPanel.classList.toggle("active");
+      });
+
+      closeBtn.addEventListener("click", () => {
+        menuPanel.classList.remove("active");
       });
     </script>
 </body>
