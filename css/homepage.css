@@ -198,46 +198,76 @@ button:hover{
         color: white;
         cursor: pointer;
     }
+    iframe{
+        width: 100%;
+    }
+    .card img{
+        width: 100%;
+    }
+    .card button{
+        margin-top: 5%;
+        padding: 5px 10px;
+        border: none;
+        background-color:chocolate;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 50%;
+    }
+    .card button:hover{
+        background-color: #cc8484;
+    }
+    footer .image{
+        width: auto;
+    }
 }
-
 /* Tablet */
 @media screen and (min-width: 426px) and (max-width: 1023px){
     nav ul li {
         margin-right: 20px;
     }
 
-    .burger {   
+    .burger {
         display: block;
         font-size: 1.5rem;
-        color: white;
+        color: white;    
         cursor: pointer;
     }
-    .menu-panel{    
-        background-color: red;
-        color: white;
-        height: 100%;
-        width: 250px;
-        position: fixed;
-        top: 0;
-        right: -100%;
-        transition: right ease 0.4s;
+    .header {
+        text-align: center;
     }
-    .menu-panel ul {
-        list-style: none;
-        padding: 50px 20px;
+    .menu-panel.active {
+        margin-top: 15px;
+        right: 0;
     }
-    .menu-panel ul li {
-        margin-bottom: 10px;
+    nav ul {
+        display: none;
     }
-    .menu-panel ul li a {
-        color: white;
-        text-decoration: none;
+    .card {
+        width: 50%;
+        margin: 1%;
     }
-    .close-btn{
-        position: absolute; 
-        top: 10px;
-        right: 10px;    
-        font-size: 1.5rem;
-        color: white;
-        cursor: pointer;
-        background-color: transparent;
+}
+
+@media screen and (min-width: 1024px) and (min-width: 1440px) {
+    nav ul li {
+        margin-right: 20px;
+    }
+    .burger{
+        display: none;
+    }
+    .header {
+        text-align: center;
+    }
+    nav ul {
+        display: flex;
+    }
+    h1{
+        font-size: 20px;
+    }
+    .card {
+        width: 50%;
+        margin: 1%;
+    }
+}
+
